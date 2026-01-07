@@ -1,0 +1,61 @@
+## Visual Studio & .NET Build Results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Aa]rtifacts/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.log
+*.tlog
+
+## Visual Studio IDE
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.cache
+*.ide
+
+## Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+## Windows & OS Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Archives & Packages
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.nupkg
+*.snupkg
+
+## Temporary Files
+*.tmp
+*.err
+*.lock
+*.swp
+*.swo
