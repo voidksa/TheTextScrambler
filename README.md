@@ -32,6 +32,10 @@ You can set a **Default PIN** in the settings:
 - **Set a PIN**: The app will use this PIN automatically for all operations, skipping the prompt for faster usage.
 - **Leave Empty**: You will be prompted to enter a PIN manually every time, allowing you to use different PINs for different messages.
 
+<div align="center">
+  <img src="screenshots/settings.png" alt="Settings Window" width="600" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/>
+</div>
+
 ## 🚀 How It Works
 
 1.  **Zero Storage**: Your PIN/password is never stored anywhere.
