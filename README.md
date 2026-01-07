@@ -4,7 +4,7 @@
 
   # The Text Scrambler
 
-  [![Download](https://img.shields.io/github/v/release/voidksa/TheTextScrambler?label=Download&style=for-the-badge&color=2CB67D&logo=windows)](https://github.com/voidksa/TheTextScrambler/releases/latest)
+  [![Download](https://img.shields.io/badge/Download-v1.0.0-2CB67D?style=for-the-badge&logo=windows)](https://github.com/voidksa/TheTextScrambler/releases/latest)
   [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
   **A lightweight desktop utility for encrypting and decrypting text instantly using strong, industry-standard cryptography. Designed for speed, simplicity, and local-only security.**
@@ -26,6 +26,11 @@
   - Encrypt: `Shift` + `E`
   - Decrypt: `Shift` + `D`
   - *Fully configurable in settings.*
+
+### ⚡ Default PIN Feature
+You can set a **Default PIN** in the settings:
+- **Set a PIN**: The app will use this PIN automatically for all operations, skipping the prompt for faster usage.
+- **Leave Empty**: You will be prompted to enter a PIN manually every time, allowing you to use different PINs for different messages.
 
 ## 🚀 How It Works
 

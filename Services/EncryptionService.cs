@@ -50,6 +50,26 @@ namespace TextScrambler.Services
             return Convert.ToBase64String(ms.ToArray(), Base64FormattingOptions.InsertLineBreaks);
         }
 
+        public bool IsEncryptedFormat(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return false;
+            try
+            {
+                // Must be valid Base64
+                Span<byte> buffer = new Span<byte>(new byte[text.Length]);
+                if (!Convert.TryFromBase64String(text, buffer, out int bytesWritten)) return false;
+                
+                // Must be at least 32 bytes (Salt + IV)
+                if (bytesWritten < 32) return false;
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public string Decrypt(string cipherText, string password)
         {
             if (string.IsNullOrEmpty(cipherText)) return "";

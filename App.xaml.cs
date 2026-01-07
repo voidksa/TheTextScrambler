@@ -80,7 +80,7 @@ namespace TextScrambler
             exitItem.TextAlign = ContentAlignment.MiddleLeft;
 
             _notifyIcon.ContextMenuStrip.Items.Add(settingsItem);
-            _notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator()); // Separator looks nice
+            // _notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator()); // Removed per user request
             _notifyIcon.ContextMenuStrip.Items.Add(exitItem);
 
             // Apply initial theme to ContextMenu
@@ -234,23 +234,27 @@ namespace TextScrambler
             string text = _inputService.GetSelectedText();
             if (string.IsNullOrEmpty(text)) return;
 
-            // 2. Prompt for PIN
-            string pin = _settings.DefaultPin;
-            Application.Current.Dispatcher.Invoke(() =>
+            // Check if text looks like a valid encrypted string
+            if (!_encryptionService.IsEncryptedFormat(text))
             {
-                var pinWin = new PinWindow();
-                // If we have a default PIN, maybe pre-fill? No, user might want to enter a different one.
-                // Or we try default first? 
-                // Let's just prompt.
-                if (pinWin.ShowDialog() == true)
+                // Silently ignore invalid/non-encrypted text to avoid annoying PIN prompts
+                return;
+            }
+
+            // 2. Prompt for PIN (only if no default PIN is set)
+            string pin = _settings.DefaultPin;
+
+            if (string.IsNullOrEmpty(pin))
+            {
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    pin = pinWin.Pin;
-                }
-                else
-                {
-                    pin = null;
-                }
-            });
+                    var pinWin = new PinWindow();
+                    if (pinWin.ShowDialog() == true)
+                    {
+                        pin = pinWin.Pin;
+                    }
+                });
+            }
 
             if (string.IsNullOrEmpty(pin)) return;
 
