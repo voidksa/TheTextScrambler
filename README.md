@@ -10,8 +10,8 @@
   **A lightweight desktop utility for encrypting and decrypting text instantly using strong, industry-standard cryptography. Designed for speed, simplicity, and local-only security.**
 
   <br/>
-  <!-- <img src="screenshots/preview.png" alt="The Text Scrambler Screenshot" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/> -->
-  <!-- <br/> -->
+  <img src="screenshots/demo.gif" alt="The Text Scrambler Demo" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/>
+  <br/>
 
 </div>
 
